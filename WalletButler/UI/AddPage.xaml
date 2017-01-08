@@ -1,0 +1,194 @@
+﻿<Page
+    x:Class="WalletButler.AddPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:WalletButler"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="6*" />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <ToggleButton
+                x:Name="expend"
+                Margin="0,0,1,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                FontSize="20"
+                Click="expend_Switch"
+                Content="支出"
+                IsChecked="True" />
+
+            <ToggleButton
+                x:Name="income"
+                Grid.Column="1"
+                Margin="1,0,0,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                FontSize="20"
+                Click="income_Switch"
+                Content="收入"
+                IsChecked="False" />
+
+        </Grid>
+
+
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+
+            <TextBox
+                x:Name="expendAmount"
+                Margin="10,2,10,2"
+                VerticalContentAlignment="Center"
+                Background="AliceBlue"
+                Foreground="Red"
+                BorderBrush="{x:Null}"
+                FontFamily="微软雅黑"
+                FontSize="55"
+                Text="0"
+                TextAlignment="Center" />
+            <Grid
+                Grid.Row="1"
+                Margin="10,0,10,10"
+                Padding="5"
+                BorderBrush="#ccc"
+                BorderThickness="0,2,0,2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontFamily="微软雅黑"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Text="类别"
+                    TextAlignment="Center" />
+
+                <AppBarSeparator Grid.Column="1" 
+                               FontWeight="Bold"
+                                 
+                                 />
+                <Button
+                    Grid.Column="2"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Background="AliceBlue"
+                    BorderBrush="{x:Null}"
+                    FontFamily="微软雅黑"
+                    FontSize="25"
+                    Content="未知" />
+            </Grid>
+
+            <DatePicker
+                Grid.Row="2"
+                Width="296"
+                Height="41"
+                HorizontalAlignment="Center"
+                FontSize="22"
+                FontWeight="Black" />
+            <TimePicker
+                Grid.Row="3"
+                Width="242"
+                Height="39"
+                Margin="10"
+                HorizontalAlignment="Center"
+                FontSize="20" />
+        </Grid>
+
+
+        <Grid Grid.Row="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="7*" />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontSize="23"
+                    FontWeight="Bold"
+                    IsTextSelectionEnabled="False"
+                    Text="备注"
+                    TextAlignment="Center" />
+
+
+                <TextBox
+                    Grid.Row="1"
+                    Margin="10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    FontSize="22" />
+            </Grid>
+
+        </Grid>
+
+
+        <Grid Grid.Row="3">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button
+                x:Name="homePage"
+                Margin="0,0,1,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="#5ac8fb"
+                FontFamily="Segoe MDL2 Assets"
+                FontSize="22"
+                Click="homePage_Click"
+                Content="&#xE80F;" />
+
+            <Button
+                x:Name="addAgain"
+                Grid.Column="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="Red"
+                FontFamily="Segoe MDL2 Assets"
+                FontSize="22"
+                Content="&#xE710;" />
+            <Button
+                x:Name="doneAdd"
+                Grid.Column="2"
+                Margin="1,0,0,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="#5ac8fb"
+                FontFamily="Segoe MDL2 Assets"
+                FontSize="22"
+                Content="&#xE0E7;" />
+
+
+
+
+
+        </Grid>
+
+
+    </Grid>
+</Page>
